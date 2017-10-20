@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>简单计算器</title>
+	<link rel="stylesheet" type="text/css" href="calculator.css"/>
+	<script src="calculator.js" type="text/javascript"></script>
+	<link href="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1508249170363&di=6ad0f4d464b33d1d75bd80bbedf599fa&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F15%2F41%2F99%2F02N58PICDFG_1024.png" type="image/gif" rel="shortcut icon" />
+</head>
+<body>
+	<div id="caltitle">简单计算器</div>
+	<div id="calculator">
+		<div id="errorField"><span id="error"></span></div>
+		<div id="expressionField"><div id="expression"></div></div>
+		<div id="exprandField"><span id="exprand" class="original">0</span></div>
+		<div id="buttonField">
+			<button id="seven" onclick="clickSeven();" class="buttonText digit">7</button>
+			<button id="eight" onclick="clickEight();" class="buttonText digit">8</button>
+			<button id="nine" onclick="clickNine();" class="buttonText digit">9</button>
+			<button id="divide" onclick="clickDivide();" class="buttonText">/</button><button id="four" onclick="clickFour();" class="buttonText digit">4</button>
+			<button id="five" onclick="clickFive();" class="buttonText digit">5</button>
+			<button id="six" onclick="clickSix();" class="buttonText digit">6</button>
+			<button id="multiple" onclick="clickMultiple();" class="buttonText">*</button><button id="one" onclick="clickOne();" class="buttonText digit">1</button>
+			<button id="two" onclick="clickTwo();" class="buttonText digit">2</button>
+			<button id="three" onclick="clickThree();" class="buttonText digit">3</button>
+			<button id="minus" onclick="clickMinus();" class="buttonText">-</button><button id="point" onclick="clickPoint();" class="buttonText">.</button>
+			<button id="zero" onclick="clickZero();" class="buttonText digit">0</button>
+			<button id="backspace" onclick="clickBackspace();" class="buttonText">&larr;</button>
+			<button id="plus" onclick="clickPlus();" class="buttonText">+</button><button id="leftBrace" onclick="clickLeft();" class="buttonText">(<span id="numberOfBraces"></span></button>
+			<button id="rightBrace" onclick="clickRight();" class="buttonText">)</button>
+			<button id="clear" onclick="clickClear();" class="buttonText">CE</button>
+			<button id="equal" onclick="clickEqual();" class="buttonText">=</button>
+		</div>
+	</div>
+</body>
+</html>

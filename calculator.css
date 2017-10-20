@@ -1,0 +1,182 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	font-size: 0;
+	overflow: hidden;
+	background-color: #F0F0F0;
+}
+
+#caltitle {
+	text-align: center;
+	font-size:50px;
+	margin: 100px auto 50px auto;
+}
+
+#calculator {
+	width: 390px;
+	height: 450px;
+	margin: 0 auto;
+
+}
+
+/*
+#errorField {
+	width: 380px;
+	height: 35px;
+	margin: 6px 2px;
+	font-size: 15px;
+	line-height: 15px;
+	color: red;
+}
+
+#error {
+	float:right;
+}
+*/
+#expressionField {
+	
+
+}
+
+#expression {
+	word-wrap: break-word;
+	border: 2px;
+	width: 369px;
+	padding: 9.5px;
+	height: 50px;
+	margin: 0;
+	font-size: 15px;
+	line-height: 15px;
+	overflow: hidden;
+	color: white;
+	float:left;
+	background-color: black;
+}
+
+#exprandField {
+	border: 2px;
+	width: 369px;
+	padding: 9.5px;
+	height: 60px;
+	margin: 0;
+	overflow: hidden;
+	color: white;
+	background-color: black;
+
+}
+
+#exprand {
+	float:right;
+}
+
+#buttonField {
+	width: 390px;
+	height: 270px;
+}
+
+.buttonText {
+	border: 1px solid grey;
+	width:97px;
+	height:54px;
+	font-size: 23px;
+}
+
+.buttonText:hover {
+	background-color: grey;
+}
+
+.digit {
+	font-weight: bold;
+}
+
+#numberOfBraces {
+	display: inline-block;
+	position: relative;
+	width: 8px;
+	height: 8px;
+	left: 2px;
+	bottom:-5px;
+	font-size: 7px;
+}
+
+#plus {
+	color: white;
+	background-color: orange;
+}
+
+#plus:hover {
+	background-color: grey;
+}
+
+#minus {
+	color: white;
+	background-color: orange;
+}
+
+#minus:hover {
+	background-color: grey;
+}
+
+#multiple {
+	color: white;
+	background-color: orange;
+}
+
+#multiple:hover {
+	background-color: grey;
+}
+
+#divide {
+	color: white;
+	background-color: orange;
+}
+
+#divide:hover {
+	background-color: grey;
+}
+
+
+#equal {
+	color: white;
+	background-color: orange;
+}
+
+#equal:hover {
+	background-color: grey;
+}
+
+
+.original {
+	font-size: 52px;
+	line-height: 52px;
+}
+
+.smallSizeOne {
+	font-size: 44px;
+	line-height: 44px;
+}
+
+.smallSizeTwo {
+	font-size: 38px;
+	line-height: 38px;
+}
+
+.smallSizeThree {
+	font-size: 34px;
+	line-height: 34px;
+}
+
+.smallSizeFour {
+	font-size: 31px;
+	line-height: 31px;
+}
+
+.smallSizeFive {
+	font-size: 28px;
+	line-height: 28px;
+}
+
+.smallSizeSix {
+	font-size: 17px;
+	line-height: 17px;
+}
