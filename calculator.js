@@ -6,6 +6,9 @@ operator = false;
 numOfPoint = 0;
 
 function updateExpression() {
+	if ( expression == "NaN" || exprand == "NaN")
+		return;
+
 	if ( expression == "undefined")
 		expression = document.getElementById("exprand").textContent;
 	document.getElementById("expression").textContent = expression;
@@ -15,7 +18,13 @@ function updateExprand() {
 	if ( exprand == "NaN" )
 	{
 		document.getElementById("exprand").className = "original";
-		document.getElementById("exprand").textContent = "Infinity";
+		document.getElementById("exprand").textContent = "结果未定义";
+		var list = document.getElementsByTagName("button");
+		for ( var i = 0; i < list.length; ++i )
+		{
+			if (list[i].id != "clear" )
+				list[i].disabled = true;
+		}
 	}
 	else if ( exprand != "undefined" )
 	{	
@@ -143,7 +152,7 @@ clickNine = function() {
 }
 
 clickPlus = function() {
-	operator = true;
+	
 	var last = expression.charAt(expression.length - 1);
 	if ( exprand == "0" && (last == "*" || last == "/" ))
 		expression += "1";
@@ -154,11 +163,12 @@ clickPlus = function() {
 	expression += "+";
 	updateExpression();
 	exprand = "0";
+	operator = true;
 
 }
 
 clickMinus = function() {
-	operator = true;
+	
 	var last = expression.charAt(expression.length - 1);
 	if ( exprand == "0" && (last == "*" || last == "/" ))
 		expression += "1";
@@ -168,26 +178,27 @@ clickMinus = function() {
 	expression += "-";
 	updateExpression();
 	exprand = "0";
+	operator = true;
 }
 
 clickMultiple = function() {
-	operator = true;
 	if ( expression.charAt(expression.length - 1) != ")")
-		expression += (exprand == "0" ? "1" : exprand);
+		expression += (operator ? "1" : exprand);
 
 	expression += "*";
 	updateExpression();
 	exprand = "0";
+	operator = true;
 }
 
 clickDivide = function() {
-	operator = true;
+	
 	if ( expression.charAt(expression.length - 1) != ")")
-		expression += (exprand == "0" ? "1" : exprand);
-
+		expression += (operator ? "1" : exprand);
 	expression += "/";
 	updateExpression();
 	exprand = "0";
+	operator = true;
 }
 
 clickPoint = function() {
@@ -202,7 +213,7 @@ clickPoint = function() {
 }
 
 clickBackspace = function() {
-	if (exprand == "Infinity" || exprand == "-Infinity")
+	if (exprand == "Infinity" || exprand == "-Infinity" || exprand == "NaN" || exprand.indexOf("e") != -1)
 		return;
 
 	if ( exprand.charAt(exprand.length - 1) == "." )
@@ -220,6 +231,10 @@ clickBackspace = function() {
 }
 
 clickClear = function() {
+	var list = document.getElementsByTagName("button");
+	for ( var i = 0; i < list.length; ++i )
+		list[i].disabled = false;
+	
 	expression = "";
 	exprand = "0";
 	numOfPoint = 0;
